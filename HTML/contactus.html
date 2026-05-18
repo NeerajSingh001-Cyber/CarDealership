@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/CSS/contactus.css">
+    <link rel="stylesheet" href="/CSS/popuplogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="parent">
+        <div class="head-content">
+            <header>
+                <div class="nav-logo">
+                    <img class="logo" src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="logo" height="100%" width="100%">
+                </div>
+                <div class="nav-bar">
+                    <div class="nav">
+                        <a href="homepage.html">Home</a>
+                        <a href="buy.html">Buy Cars</a>
+                        <a href="sell.html">Sell Cars</a>
+                        <div class="dropdown">
+                            <a class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="carservice.html">Car Servicing</a>
+                                <a href="insurance.html">Car Insurance</a>
+                            </div>
+                        </div>
+                        <a id="active" href="">Contact Us</a>
+                        <a href="moreaboutus.html">About Us</a>
+                    </div>
+                    <div class="log-sign">
+                        <button class="btn" id="login1" onclick="openPopup('login')">Login</button>
+                        <button class="btn" id="login2" onclick="openPopup('signup')">Signup</button>
+                        <div class="overlay" id="overlay">
+                            <div class="popup" id="loginPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Login</h2>
+                            <form>
+                                <label for="loginEmail">Email</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                                
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                
+                                <button type="submit">Login</button>
+                            </form>
+                            <p>Don't have an account? <button onclick="switchPopup('signup')">Sign up</button></p>
+                            </div>
+                            <div class="popup" id="signupPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Sign Up</h2>
+                            <form>
+                                <label for="signupUsername">Username</label>
+                                <input type="text" id="signupUsername" placeholder="Choose a username" required>
+                                
+                                <label for="signupEmail">Email</label>
+                                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                                
+                                <label for="signupPassword">Password</label>
+                                <input type="password" id="signupPassword" placeholder="Create a password" required>
+                                <label for="confirmSignupPassword">Confirm Password</label>
+                                <input type="password" id="confirmSignupPassword" placeholder="Confirm your password" required>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p>Already have an account? <button onclick="switchPopup('login')">Login</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="slogan">
+                    <h1>From query to care,<br>We are always there...</h1>
+                </div>
+            </div>
+        </div>
+        <main>
+            <section class="contact-section">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions or need assistance? We're here to help you.</p>
+                    <ul>
+                        <a href="https://maps.app.goo.gl/KTMkkBUQWcMDLihr8"><li><i class="fas fa-map-marker-alt"></i> Chitkara University, Rajpura, Punjab</li></a>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <a href="https://mail.google.com"><li><i class="fas fa-envelope"></i> support@nrpldealers.com</li></a>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                        <input type="text" id="contactSubject" placeholder="Subject" required>
+                        <textarea id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    <p id="contactStatus" class="contact-status" aria-live="polite"></p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer1">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                    <img src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="Logo" />
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul>
+                            <li><a href="homepage.html">Home</a></li>
+                            <li><a href="buy.html">Buy Cars</a></li>
+                            <li><a href="sell.html">Sell Cars</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="moreaboutus.html">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                            <li><a href="carservice.html">Car Servicing</a></li>
+                            <li><a href="insurance.html">Car Insurance</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Connect With Us</h4>
+                            <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/?_rdr"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <p>© 1999 NRPL Dealers. All Copyrights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/JS/popuplogin.js"></script>
+    <script src="/JS/stickyheader.js"></script>
+    <script src="/JS/contactus.js"></script>
+</body>
+</html>

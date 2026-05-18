@@ -1,0 +1,747 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+.parent{
+  min-height: 100vh;
+  width: 100vw;
+}
+
+button {
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.head-content{
+  width: auto;
+  background-image: url(https://www.cnet.com/a/img/resize/f0f04967f9819b7471dadeb2941e4fc0f0d05115/hub/2020/09/01/94ca804a-201a-492e-8604-290483f10532/2021-mercedes-benz-s-class-003.jpg?auto=webp&width=1200);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header{
+  height: 15%;
+  display: flex;
+  background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.6), rgb(0, 0, 0));
+  transition: background 0.3s ease, padding 0.3s ease;
+}
+header.fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: black;
+  z-index: 1000;
+}
+
+body.fixed-header {
+  padding-top: 100px;
+}
+
+.nav-bar{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 3%;
+  align-content: space-between;
+}
+.nav-logo{
+  width: 10%;
+}
+
+.nav{
+  height: 100%;
+  width: 75%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+  font-size: 28px;
+}
+.nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+  position: relative;
+  text-decoration: none; 
+}
+
+.dropbtn {
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  background-color: #000000;
+  font-size: large;
+  display: none;
+  position: absolute;
+  min-width: 80px;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#active {
+  text-decoration: 3px solid underline;
+  text-underline-offset: 6px;
+}
+#active::after {
+  transition: none;
+}
+#active:hover::after{
+  transform: scaleX(0);
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  background: rgb(247, 247, 247);
+  transition: transform 0.5s ease;
+}
+.dropdown-content a::after{
+  left: 15px;
+  bottom: 11px;
+  width: 75%;
+  text-align: left;
+}
+
+.nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.log-sign{
+  height: 100%;
+  width: 20%;
+  display: flex;
+  gap: 20px;
+}
+
+#login1, #login2{
+  font-size: 21px;
+  margin-top: 15%;
+  padding: 5%;
+  border-radius: 30%;
+  background-color: transparent;
+  color: white;
+  font-style: italic;
+  font-weight: 500;
+  border: 2px solid rgb(255, 255, 255);
+  transition: 0.5s ease-in-out;
+}
+#login1{
+  width: 50%;
+  height: max-content;
+}
+#login2{
+  width: 55%;
+  height: max-content;
+}
+
+#login1:hover, #login2:hover{
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.main-content{
+  height: 79vh;
+  width: 100%;
+  background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.6), rgb(0, 0, 0));
+}
+.slogan{
+  color: white;
+  height: 100%;
+  width: 50%;
+  padding: 5%;
+  font-size: 1.6rem;
+  font-style: italic;
+  font-family: Copperplate, Papyrus, fantasy;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.slogan h1 {
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+
+main{
+  height: 100%;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 5%;
+  background-color: #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content1{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  transition-delay: 5s;
+}
+.content-para{
+  width: 50%;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  padding: 5%;
+}
+.content-para h1, .content-para h2{
+  padding-bottom: 15px;
+}
+
+.content-pic{
+  width: 45%;
+}
+.content-pic img{
+  width: 85%;
+  padding-top: 20%;
+  filter: brightness(0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.content-pic img:hover{
+  transform: scale(1.07);
+  filter: brightness(1);
+}
+
+#moreaboutus{
+  width: 35%;
+  font-size: 21px;
+  padding: 2%;
+  border-radius: 30%;
+  background-color: transparent;
+  font-style: italic;
+  font-weight: bolder;
+  border: 2px solid rgb(0, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+
+#moreaboutus:hover{
+  color: white;
+  background-color: #284B63;
+  border: 2px solid #284B63;
+  cursor: pointer;
+}
+.content2{
+  height: auto;
+}
+.vdo{
+  position: relative;
+  top: -40px;
+  width: 70%;
+  max-height: 100%;
+  margin: 3% 15%;
+  border-radius: 3%;
+  cursor: none;
+  filter: brightness(0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.vdo:hover{
+  transform: scale(1.07);
+  filter: brightness(1);
+}
+
+
+.partners{
+  width: 90%;
+  margin: 0% 5% 0%;
+  background-color: rgb(0, 0, 0);
+  border: 1px dotted white;
+  color: #fff;
+  padding: 1%;
+  font-size: 28px;
+  font-family: "Courier New", Courier, monospace;
+}
+.partner-logos{
+  width: 95%;
+  margin: 2% 2.5%;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  display: flex;
+  gap: 1%;
+}
+.partners a img{
+  width: 90%;
+  padding: 10%;
+}
+.partner-logos a img {
+  transition: transform 0.6s ease;
+}
+.partner-logos a img:hover {
+  transform: scale(1.2);
+}
+
+#big{
+  width: 80%;
+  padding: 20%;
+}
+
+#small{
+  padding-top: 30%;
+  padding-left: 0%;
+  width: 100%;
+}
+
+.car-slider {
+  width: 80%;
+  background: #111827;
+  border: 1px solid #334155;
+  margin: 5% 22.5% 0%;
+  overflow: hidden;
+  border-radius: 15px;
+  color: #e2e8f0;
+  transition: all 0.5s ease-in-out;
+}
+
+.car-slider:hover{
+  box-shadow: 2px 2px 30px 2px black;
+}
+
+.car-slider h1 {
+  padding: 2%;
+  font-size: 25px;
+  border-radius: 3%;
+  background: linear-gradient(to right, #2563eb, #0f172a, #111827);
+  border-bottom: 2px solid #334155;
+}
+
+.slides {
+  display: flex;
+  width: 800%;
+  animation: slide 35s infinite;
+}
+
+.slide {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1f2937;
+  border-radius: 15px;
+  margin: 1% 0% 1%;
+  padding: 5px 0px 5px;
+  width: 80%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.4s ease-in-out;
+}
+
+.car-card:hover{
+  transform: scale(1.02);
+  box-shadow: 2px 2px 30px 2px black;
+  cursor: pointer;
+}
+
+.car-card img {
+  min-width: 70%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.car-info {
+  text-align: center;
+  color: #e2e8f0;
+}
+
+.car-info h2 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+.desc {
+  font-size: 18px;
+}
+.moreinfo{
+  font-size: 15px;
+}
+.car-info p{
+  line-height: 170%;
+}
+@keyframes slide {
+  0% { margin-left: 0; }
+  12.5% { margin-left: 0; }
+  25% { margin-left: -100%; }
+  37.5% { margin-left: -200%; }
+  50% { margin-left: -300%; }
+  62.5% { margin-left: -400%; }
+  75% { margin-left: -500%; }
+  87.5% {margin-left: -600%;}
+  100% { margin-left: -700%; }
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer1{
+  padding-bottom: 4%;
+  padding: 40px 20px;
+  border-bottom: 1px solid white;
+  width: 95%;
+  margin: 0 auto; 
+}
+.footer2{
+  height: 30px;
+  padding: 6px;
+}
+.footer2 p{
+  text-align: center;
+}
+.footer-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  padding-top: 0%;
+  width: 180px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 180px;
+  margin-right: 14%;
+}
+
+.footer-column h4 {
+  font-size: larger;
+  margin-bottom: 8%;
+  color: #fff;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+.social-icons {
+  display: flex;
+  gap: 15%;
+  margin-top: 10%;
+}
+.social-icons i {
+  font-size: 18px;
+  color: #bbb;
+  transition: color 0.3s;
+}
+.social-icons i:hover {
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .nav{
+    font-size: larger;
+  }
+  #login1, #login2{
+    font-size: 18px;
+  }
+  .content-para{
+    font-size: larger;
+    line-height: 1.4rem;
+  }
+  .content-para h1{
+    font-size: xxx-large;
+  }
+  .content-para h2{
+    font-size: x-large;
+  }
+  .content-pic img{
+    width: 100%;
+    height: 70%;
+    padding-top: 24%;
+  }
+  #moreaboutus{
+    width: 50%;
+    font-size: large;
+    border-radius: 25%;
+  }
+  .footer-links {
+    gap: 230px;
+    flex-wrap: nowrap;
+  }
+  .footer-logo{
+    padding-left: 40%;
+  }
+
+}
+
+@media (max-width: 912px) {
+  .nav{
+    font-size: large;
+  }
+  #login1, #login2 {
+  font-size: 16px;
+  }
+  .head-content{
+    background-size: contain;
+  }
+  .slogan{
+    font-size: x-large;
+  }
+  .main-content{
+    height: 30vh;
+  }
+  .content-para{
+    font-size: medium;
+    line-height: 1.2rem;
+  }
+  .content-para h1{
+    font-size: x-large;
+  }
+  .content-para h2{
+    font-size: large;
+  }
+  .content-pic img{
+    width: 100%;
+    height: 70%;
+    padding-top: 24%
+  }
+  #moreaboutus{
+    width: 50%;
+    font-size: medium;
+    border-radius: 25%;
+  }
+  .footer-links {
+    gap: 220px;
+    flex-wrap: nowrap;
+  }
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .footer-column h4{
+    font-size: medium;
+  }
+  .footer-column ul{
+    font-size: small;
+  }
+  .social-icons i{
+    font-size: 14px;
+  }
+  .footer2{
+    height: 20px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 854px) {
+  #login1, #login2 {
+  font-size: 14px;
+  }
+  .slogan{
+    font-size: larger;
+  }
+  .footer-links {
+    gap: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav{
+    font-size: medium;
+  }
+  #login1, #login2 {
+  font-size: 10px;
+  }
+  .slogan{
+    font-size: medium;
+  }
+  #active{
+    text-decoration: none;
+  }
+  .main-content{
+    height: 40vh;
+  }
+  .content-para{
+    font-size: medium;
+    line-height: 1.2rem;
+  }
+  .content-para h1{
+    font-size: x-large;
+  }
+  .content-para h2{
+    font-size: large;
+  }
+  .content-pic img{
+    width: 100%;
+    height: 70%;
+    padding-top: 24%
+  }
+  #moreaboutus{
+    width: 50%;
+    font-size: medium;
+    border-radius: 25%;
+  }
+  .footer-links {
+    gap: 160px;
+    flex-wrap: nowrap;
+  }
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .footer-column h4{
+    font-size: medium;
+  }
+  .footer-column ul{
+    font-size: small;
+  }
+  .social-icons i{
+    font-size: 14px;
+  }
+  .footer2{
+    height: 20px;
+    padding: 2px;
+  }
+}
+
+@media (max-width: 541px) {
+  .nav{
+    font-size: x-small;
+  }
+  #login1, #login2 {
+  font-size: 8px;
+  }
+  .slogan{
+    font-size: 14px;
+  }
+  .content1{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .content-para{
+    width: 100%;
+  }
+  .content-pic{
+    width: 90%;
+  }
+  .vdo{
+    top: -20px;
+  }
+  .footer-links{
+    flex-wrap: wrap;
+  }
+  .footer-logo{
+    padding-left: 30%;
+  }
+}
+
+@media (max-width: 541px) {
+  .nav{
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: xx-small;
+  }
+  .slogan{
+    font-size: 10px;
+  }
+  .log-sign{
+    flex-direction: column;
+  }
+  #login1, #login2 {
+    width: 70%;
+    border: 2px solid white;
+  }
+  #login1{
+    border-bottom: 0px;
+  }
+  #login2{
+    margin-top: 0%;
+    position: relative;
+    top: -2px;
+    border-top: 0px;
+  }
+  .main-content{
+    height: 25vh;
+  }
+  .car-card img{
+    max-height: 100px;
+  }
+  .car-info h2{
+    font-size: 20px;
+  }
+  .price{
+    font-size: 18px;
+  }
+  .desc{
+    font-size: 16px;
+  }
+  .moreinfo{
+    font-size: 14px;
+  }
+  .footer-links{
+    gap: 100px;
+  }
+  .footer-logo{
+    padding-left: 25%;
+  }
+}

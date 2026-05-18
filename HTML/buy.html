@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Car</title>
+    <link rel="stylesheet" href="/CSS/buy.css">
+    <link rel="stylesheet" href="/CSS/popuplogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="parent">
+        <div class="head-content">
+            <header>
+                <div class="nav-logo">
+                    <img class="logo" src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="logo" height="100%" width="100%">
+                </div>
+                <div class="nav-bar">
+                    <div class="nav">
+                        <a href="homepage.html">Home</a>
+                        <a id="active" href="">Buy Cars</a>
+                        <a href="sell.html">Sell Cars</a>
+                        <div class="dropdown">
+                            <a class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="carservice.html">Car Servicing</a>
+                                <a href="insurance.html">Car Insurance</a>
+                            </div>
+                        </div>
+                        <a href="contactus.html">Contact Us</a>
+                        <a href="moreaboutus.html">About Us</a>
+                    </div>
+                    <div class="log-sign">
+                        <button class="btn" id="login1" onclick="openPopup('login')">Login</button>
+                        <button class="btn" id="login2" onclick="openPopup('signup')">Signup</button>
+                        <div class="overlay" id="overlay">
+
+                            <div class="popup" id="loginPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Login</h2>
+                            <form>
+                                <label for="loginEmail">Email</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                                
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                <label>
+                                    <input type="checkbox" name="showLoginPassword" id="showLoginPassword">Show Password
+                                </label>
+                                <button type="submit">Login</button>
+                            </form>
+                            <p>Don't have an account? <button onclick="switchPopup('signup')">Sign up</button></p>
+                            </div>
+
+                            <div class="popup" id="signupPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Sign Up</h2>
+                            <form>
+                                <label for="signupUsername">Username</label>
+                                <input type="text" id="signupUsername" placeholder="Choose a username" required>
+                                
+                                <label for="signupEmail">Email</label>
+                                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                                
+                                <label for="signupPassword">Password</label>
+                                <input type="password" id="signupPassword" placeholder="Create a password" required>
+                                <label for="confirmSignupPassword">Confirm Password</label>
+                                <input type="password" id="confirmSignupPassword" placeholder="Confirm your password" required>
+                                <label>
+                                    <input type="checkbox" name="showSignupPassword" id="showSignupPassword">Show Password
+                                </label>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p>Already have an account? <button onclick="switchPopup('login')">Login</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="slogan">
+                    <h1>Grace in every gear,<br>your journey begins here...</h1>
+                </div>
+            </div>
+            
+        </div>
+        <main>
+            <div class="search-bar" id="buycar">
+                <input type="text" placeholder="Search for cars...">
+                <button>Search</button>
+            </div>
+            <div class="filter-box">
+                <h2>Filters:</h2>
+                <div class="filters">
+                <div class="filter-section">
+                    <h4>Budget</h4>
+                    <a class="filter-item" data-type="budget" data-value="under50">Under 50 Lakhs</a>
+                    <a class="filter-item" data-type="budget" data-value="under100">Under 1 Crore</a>
+                    <a class="filter-item" data-type="budget" data-value="under500">Under 5 Crores</a>
+                    <a class="filter-item" data-type="budget" data-value="under1000">Under 10 Crores</a>
+                </div>
+
+                <div class="filter-section">
+                    <h4>Body Type</h4>
+                    <a class="filter-item" data-type="type" data-value="SUV">SUV</a>
+                    <a class="filter-item" data-type="type" data-value="MUV">MUV</a>
+                    <a class="filter-item" data-type="type" data-value="Hatchback">Hatchback</a>
+                    <a class="filter-item" data-type="type" data-value="Sedan">Sedan</a>
+                </div>
+
+                <div class="filter-section">
+                    <h4>Fuel Type & Others</h4>
+                    <a class="filter-item" data-type="fuel" data-value="Electric">Electric</a>
+                    <a class="filter-item" data-type="fuel" data-value="Hybrid">Hybrid</a>
+                    <a class="filter-item" data-type="fuel" data-value="Petrol">Petrol</a>
+                    <a class="filter-item" data-type="fuel" data-value="Diesel">Diesel</a>
+                </div>
+            </div>
+            </div>
+            <div class="available-car">
+                <h1 id="available">Available Cars</h1>
+                <div class="product-grid">
+                    
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer1">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                    <img src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="Logo" />
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul>
+                            <li><a href="homepage.html">Home</a></li>
+                            <li><a href="#buycar">Buy Cars</a></li>
+                            <li><a href="sell.html">Sell Cars</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="moreaboutus.html">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                            <li><a href="carservice.html">Car Servicing</a></li>
+                            <li><a href="insurance.html">Car Insurance</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Connect With Us</h4>
+                            <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/?_rdr"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <p>© 1999 NRPL Dealers. All Copyrights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/JS/stickyheader.js"></script>
+    <script src="/JS/popuplogin.js"></script>
+    <script src="/JS/buy.js"></script>
+</body>
+</html>

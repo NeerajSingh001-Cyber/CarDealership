@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NRPL Dealers</title>
+    <link rel="stylesheet" href="/CSS/homepage.css">
+    <link rel="stylesheet" href="/CSS/popuplogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="parent">
+        <div class="head-content">
+            <header>
+                <div class="nav-logo">
+                    <img class="logo" src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="logo" height="100%" width="100%">
+                </div> 
+                <div class="nav-bar">
+                    <div class="nav">
+                        <a id="active" href="">Home</a>
+                        <a href="buy.html">Buy Cars</a>
+                        <a href="sell.html">Sell Cars</a>
+                        <div class="dropdown">
+                            <a class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="carservice.html">Car Servicing</a>
+                                <a href="insurance.html">Car Insurance</a>
+                            </div>
+                        </div>
+                        <a href="contactus.html">Contact Us</a>
+                        <a href="moreaboutus.html">About Us</a>
+                    </div>
+                    <div class="log-sign">
+                        <button class="btn" id="login1" onclick="openPopup('login')">Login</button>
+                        <button class="btn" id="login2" onclick="openPopup('signup')">Signup</button>
+                        <div class="overlay" id="overlay">
+                            <div class="popup" id="loginPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Login</h2>
+                            <form>
+                                <label for="loginEmail">Email</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                                
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                <label>
+                                    <input type="checkbox" name="showLoginPassword" id="showLoginPassword">Show Password
+                                </label>
+                                <button type="submit">Login</button>
+                            </form>  
+                            <p>Don't have an account? <button onclick="switchPopup('signup')">Sign up</button></p>
+                            <p style="margin-top: 10px; font-size: 14px;">Login as a dealer? <a href="http://localhost:3000/dealer/login">Dealer Portal</a></p>
+                            </div>
+                            <div class="popup" id="signupPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Sign Up</h2>
+                            <form>
+                                <label for="signupUsername">Username</label>
+                                <input type="text" id="signupUsername" placeholder="Choose a username" required>
+                                
+                                <label for="signupEmail">Email</label>
+                                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                                
+                                <label for="signupPassword">Password</label>
+                                <input type="password" id="signupPassword" placeholder="Create a password" required>
+                                <label for="confirmSignupPassword">Confirm Password</label>
+                                <input type="password" id="confirmSignupPassword" placeholder="Confirm your password" required>
+                                <label>
+                                    <input type="checkbox" name="showSignupPassword" id="showSignupPassword">Show Password
+                                </label>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p>Already have an account? <button onclick="switchPopup('login')">Login</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="slogan">
+                <h1>Pre - Owned Cars, <br>First Class Experience!</h1>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="content1" id="aboutus">
+                <div class="content-para">
+                    <h2>About Us</h2>
+                    <h1>NRPL Dealers -</h1>
+                    <h2>Your Trusted Partner in Pre-Owned Cars!</h2>
+                    <p>At NRPL Dealers, we make buying and selling second-hand cars simple, reliable, and stress-free. Whether you’re searching for a well-maintained used car at the best price or planning to sell your vehicle quickly and hassle-free, we’ve got you covered. With our transparent process, wide selection of vehicles, and customer-first approach, we ensure you drive away with complete peace of mind. NRPL Dealers – where trust meets wheels!</p><br>
+                    <button onclick="window.location.href='moreaboutus.html';" id="moreaboutus">More About Us</button>
+                </div>
+                <div class="content-pic">
+                    <img src="/MEDIA/luxury-car-showroom-stockcake.webp" alt="image">
+                </div>
+            </div>
+            <div class="content2">
+                <video class="vdo" src="/MEDIA/13103391_1920_1080_60fps.mp4" type="video/mp4" loop preload="metadata" muted playsinline autoplay></video>
+            </div>
+            <div class="partners">
+                <center>Our Brand Partners</center>
+                <div class="partner-logos">
+                    <a href="#"><img id="big" src="/MEDIA/Screenshot 2025-08-23 220614.png" alt="rr"></a>
+                    <a href="#"><img src="/MEDIA/Screenshot 2025-08-23 221758.png" alt="merc"></a>
+                    <a href="#"><img src="/MEDIA/Screenshot 2025-08-23 222011.png" alt="landrover"></a>
+                    <a href="#"><img src="/MEDIA/Screenshot 2025-08-23 224801.png" alt="bmw"></a>
+                    <a href="#"><img id="big" src="/MEDIA/Screenshot 2025-08-23 225201.png" alt="lambo"></a>
+                    <a href="#"><img id="small" src="/MEDIA/Screenshot 2025-08-23 230014.png" alt="audi"></a>
+                    <a href="#"><img id="big" src="/MEDIA/Screenshot 2025-08-23 230717.png" alt="porsche"></a>
+                </div>
+            </div>
+            <div class="car-slider">
+                <center><h1>- - - YOUR CONVENIENCE IS OUR PRIORITY - - -</h1></center>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-abdul-rahman-2669315-5046305-removebg-preview.png" alt="Car 1">
+                            <div class="car-info">
+                                <h2>Rolls Royce Phantom</h2>
+                                <p class="price">Rs. 9.5 Crores</p>
+                                <p class="desc">Luxury sedan with unmatched comfort and features.</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-bleri-31458555-removebg-preview.png" alt="Car 3">
+                            <div class="car-info">
+                                <h2>Mercedes Benz S-Class</h2>
+                                <p class="price">Rs. 90 Lakhs</p>
+                                <p class="desc">High-performance Luxury Sedan</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/land-rover-new-defender-110-white-1-24-chezhi-diecast-scale-model-toy-car-1-removebg-preview.png" alt="Car 4">
+                            <div class="car-info">
+                                <h2>Land Rover Defender</h2>
+                                <p class="price">Rs. 66 Lakhs</p>
+                                <p class="desc">High-performance 4X4 SUV</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-mikebirdy-794435-removebg-preview.png" alt="Car 5">
+                            <div class="car-info">
+                                <h2>BMW M2 Coupe</h2>
+                                <p class="price">Rs. 59 Lakhs</p>
+                                <p class="desc">High-performance luxury sedan</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-alba-cars-139933177-11229044-removebg-preview.png" alt="Car 6">
+                            <div class="car-info">
+                                <h2>Jeep Wrangler Rubicon</h2>
+                                <p class="price">Rs. 65 Lakhs</p>
+                                <p class="desc">High-performance 4X4 Offroading SUV</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-ryan-west-838532-1719648-removebg-preview.png" alt="Car 7">
+                            <div class="car-info">
+                                <h2>Audi A6</h2>
+                                <p class="price">Rs. 35 Lakhs</p>
+                                <p class="desc">High-performance Luxury Sedan</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-mikebirdy-15610300-removebg-preview.png" alt="Car 2">
+                            <div class="car-info">
+                                <h2>Mercedes-Benz G-Class</h2>
+                                <p class="price">Rs. 85 Lakhs</p>
+                                <p class="desc">High-performance Luxury SUV</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="car-card">
+                            <img src="/MEDIA/pexels-abdul-rahman-2669315-5046305-removebg-preview.png" alt="Car 1">
+                            <div class="car-info">
+                                <h2>Rolls Royce Phantom</h2>
+                                <p class="price">Rs. 9.5 Crores</p>
+                                <p class="desc">Luxury sedan with unmatched comfort and features.</p>
+                                <p class="moreinfo">Tap for more info...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer1">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                    <img src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="Logo" />
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="buy.html">Buy Cars</a></li>
+                            <li><a href="sell.html">Sell Cars</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="#aboutus">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                            <li><a href="carservice.html">Car Servicing</a></li>
+                            <li><a href="insurance.html">Car Insurance</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Connect With Us</h4>
+                            <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/?_rdr"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <p>© 1999 NRPL Dealers. All Copyrights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/JS/stickyheader.js"></script>
+    <script src="/JS/popuplogin.js"></script>
+    <script>
+        const a= document.querySelector(".slides");
+        a.addEventListener("click",function(){
+            window.location.href=("buy.html#available");
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service</title>
+    <link rel="stylesheet" href="/CSS/carservice.css">
+    <link rel="stylesheet" href="/CSS/popuplogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="head-content">
+            <header>
+                <div class="nav-logo">
+                    <img class="logo" src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="logo" height="100%" width="100%">
+                </div>
+                <div class="nav-bar">
+                    <div class="nav">
+                        <a href="homepage.html">Home</a>
+                        <a href="buy.html">Buy Cars</a>
+                        <a href="sell.html">Sell Cars</a>
+                        <div class="dropdown">
+                            <a id="active" class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a id="active" href="">Car Servicing</a>
+                                <a href="insurance.html">Car Insurance</a>
+                            </div>
+                        </div>
+                        <a href="contactus.html">Contact Us</a>
+                        <a href="moreaboutus.html">About Us</a>
+                    </div>
+                    <div class="log-sign">
+                        <button class="btn" id="login1" onclick="openPopup('login')">Login</button>
+                        <button class="btn" id="login2" onclick="openPopup('signup')">Signup</button>
+                        <div class="overlay" id="overlay">
+
+                            <div class="popup" id="loginPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Login</h2>
+                            <form>
+                                <label for="loginEmail">Email</label>
+                                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                                
+                                <label for="loginPassword">Password</label>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                
+                                <button type="submit">Login</button>
+                            </form>
+                            <p>Don't have an account? <button onclick="switchPopup('signup')">Sign up</button></p>
+                            </div>
+                            <div class="popup" id="signupPopup">
+                            <button class="close" onclick="closePopup()">&times;</button>
+                            <h2>Sign Up</h2>
+                            <form>
+                                <label for="signupUsername">Username</label>
+                                <input type="text" id="signupUsername" placeholder="Choose a username" required>
+                                
+                                <label for="signupEmail">Email</label>
+                                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                                
+                                <label for="signupPassword">Password</label>
+                                <input type="password" id="signupPassword" placeholder="Create a password" required>
+                                <label for="confirmSignupPassword">Confirm Password</label>
+                                <input type="password" id="confirmSignupPassword" placeholder="Confirm your password" required>
+                                <button type="submit">Sign Up</button>
+                            </form>
+                            <p>Already have an account? <button onclick="switchPopup('login')">Login</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="slogan">
+                    <h1>Quick repair,<br>Drive anywhere...</h1>
+                </div>
+            </div> 
+        </div>
+    <main>
+    <div class="service" id="car-service">
+        <div class="first-container">
+            <div class="para">
+                <h1>Why Choose Our Service?</h1>
+                <h2>Experience hassle-free car maintenance with expert mechanics, genuine parts, and quick turnaround times. We ensure your vehicle stays safe and reliable on every journey.
+                    <br>✔ Hassle-Free Maintenance – Easy booking, fast check-ins, smooth experience
+                    <br>✔ Expert Mechanics – Certified professionals with real experience.
+                    <br>✔ Genuine Parts – Only original, manufacturer-approved components
+                    <br>✔ Quick Turnaround – Fast service without compromising on quality
+                    <br>✔ Safety & Reliability – Thorough inspections to keep your car road-ready
+                </h2>
+            </div>
+            <div class="pic">
+                <img src="https://plus.unsplash.com/premium_photo-1658526934242-aa541776ca49?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2FyJTIwc2VydmljZXxlbnwwfHwwfHx8MA%3D%3D" alt="mechanic doing Servicing">
+                </div>
+            </div>
+             <div class="service-container">
+            <h1><center>Book a Service</center></h1>
+            <h3>Maintaining your car has never been this simple. Select your desired service, fill in the form below, and let us take care of the rest. Your car's well-being starts here.</h3><br>
+            <form class="service-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="brand">Brand*</label>
+                        <select id="brand" required>
+                            <option value="">Please Select Brand</option>
+                            <option value="Rolls-Royce">Rolls-Royce</option>
+                            <option value="Lamborghini">Lamborghini</option>
+                            <option value="BMW">BMW</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Porsche">Porsche</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="regNo">Registration No.*</label>
+                        <input type="text" id="regNo" pattern="^[A-Z]{2}[0-9]{2}[A-Z]{1,2}[0-9]{4}$" placeholder="Enter Registration Number(eg. HR03AB8214)" required maxlength="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact No.*</label>
+                        <input type="tel" pattern="[0-9]{10}" id="contact" placeholder="Enter Contact Number" required maxlength="10">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="location">Location*</label>
+                        <select id="location" required>
+                            <option value="">Select Location</option>
+                            <option value="ahmedabad">Ahmedabad</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="pune">Pune</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="date">Service Date</label>
+                        <input type="date" id="date">
+                    </div>
+                </div>
+                <center><button type="submit" class="submit-btn">Schedule Service</button></center>
+            </form>
+            </div>
+        </div>
+        </main>
+        <footer class="footer">
+            <div class="footer1">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                    <img src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="Logo" />
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul>
+                            <li><a href="homepage.html">Home</a></li>
+                            <li><a href="buy.html">Buy Cars</a></li>
+                            <li><a href="sell.html">Sell Cars</a></li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                            <li><a href="moreaboutus.html">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                            <li><a href="#car-service">Car Servicing</a></li>
+                            <li><a href="insurance.html">Car Insurance</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Connect With Us</h4>
+                            <ul class="social-icons">
+                            <li><a href="https://www.facebook.com/?_rdr"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://in.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <p>© 1999 NRPL Dealers. All Copyrights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/JS/popuplogin.js"></script>
+    <script src="/JS/stickyheader.js"></script>
+</body>
+</html>

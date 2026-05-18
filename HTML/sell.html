@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Car - NRPL Dealers</title>
+    <link rel="stylesheet" href="/CSS/sell.css">
+    <link rel="stylesheet" href="/CSS/popuplogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+</head>
+<body>
+    <div class="parent">
+        <div class="head-content">
+            <header>
+                <div class="nav-logo">
+                    <img class="logo" src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="NRPL Dealers Logo" height="100%" width="100%">
+                </div>
+                <div class="nav-bar">
+                    <div class="nav">
+                        <a href="homepage.html">Home</a>
+                        <a href="buy.html">Buy Cars</a>
+                        <a id="active" href="sell.html">Sell Cars</a>
+                        <div class="dropdown">
+                            <a class="dropbtn">Services</a>
+                            <div class="dropdown-content">
+                                <a href="carservice.html">Car Servicing</a>
+                                <a href="insurance.html">Car Insurance</a>
+                            </div>
+                        </div>
+                        <a href="contactus.html">Contact Us</a>
+                        <a href="moreaboutus.html">About Us</a>
+                    </div>
+                    <div class="log-sign">
+                        <button class="btn" id="login1" onclick="openPopup('login')">Login</button>
+                        <button class="btn" id="login2" onclick="openPopup('signup')">Signup</button>
+                        <div class="overlay" id="overlay">
+                            <div class="popup" id="loginPopup">
+                                <button class="close" onclick="closePopup()">&times;</button>
+                                <h2>Login</h2>
+                                <form>
+                                    <label for="loginEmail">Email</label>
+                                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                                    
+                                    <label for="loginPassword">Password</label>
+                                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                                    
+                                    <button type="submit">Login</button>
+                                </form>
+                                <p>Don't have an account? <button type="button" onclick="switchPopup('signup')">Sign up</button></p>
+                            </div>
+                            <div class="popup" id="signupPopup">
+                                <button class="close" onclick="closePopup()">&times;</button>
+                                <h2>Sign Up</h2>
+                                <form>
+                                    <label for="signupUsername">Username</label>
+                                    <input type="text" id="signupUsername" placeholder="Choose a username" required>
+                                    
+                                    <label for="signupEmail">Email</label>
+                                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                                    
+                                    <label for="signupPassword">Password</label>
+                                    <input type="password" id="signupPassword" placeholder="Create a password" required>
+                                    
+                                    <label for="confirmSignupPassword">Confirm Password</label>
+                                    <input type="password" id="confirmSignupPassword" placeholder="Confirm your password" required>
+                                    
+                                    <button type="submit">Sign Up</button>
+                                </form>
+                                <p>Already have an account? <button type="button" onclick="switchPopup('login')">Login</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main-content">
+                <div class="slogan">
+                    <h1>Sell at Best Price,<br>Fast & Precise...</h1>
+                </div>
+            </div>
+        </div>
+        <main>
+            <form class="car-form" novalidate>
+                <center><h1>Fill Details</h1></center>
+                <h3>Personal Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name*</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="example@domain.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Contact Number*</label>
+                        <input type="tel" id="phone" placeholder="10-digit mobile number" minlength="10" maxlength="10" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State*</label>
+                        <select id="state" required>
+                            <option value="" disabled selected>Select State</option>
+                            <option value="chandigarh">Chandigarh</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="himachal_pradesh">Himachal Pradesh</option>
+                            <option value="j_and_k">Jammu & Kashmir</option>
+                            <option value="ladakh">Ladakh</option>
+                            <option value="punjab">Punjab</option>
+                            <option value="rajasthan">Rajasthan</option>
+                            <option value="uttarakhand">Uttarakhand</option>
+                            <option value="uttar_pradesh">Uttar Pradesh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City*</label>
+                        <select id="city" required disabled>
+                            
+                        </select>
+                    </div>
+                </div>
+                <h3>Vehicle Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="make">Select Make*</label>
+                        <select id="make" required>
+                            <option value="" disabled selected>Select Make</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Select Model*</label>
+                        <select id="model" required disabled>
+                            <option value="" disabled selected>Select Model</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fuel">Select Fuel Type*</label>
+                        <select id="fuel" required>
+                            <option value="" disabled selected>Select Fuel Type</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="year">Year of Manufacturing*</label>
+                        <input type="number" id="year" placeholder="e.g. 2020" min="1900" max="2025" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="km">Kilometers Run*</label>
+                        <input type="number" id="km" placeholder="e.g. 45000" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance">Insurance Validity*</label>
+                        <input type="date" id="insurance" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="about">Write more about your car*</label>
+                        <textarea id="about" placeholder="Condition, ownership, accidents, modifications, etc." rows="4" required></textarea>
+                    </div>
+                </div>
+                <div class="upload-box" id="uploadBox">
+                    <strong><p>Drag & Drop Files Here</p><br>
+                    <span>or</span><br><br></strong>
+                    <input type="file" id="files" accept="image/*" multiple>
+                    <label for="files" class="file-label">Choose Files</label>
+                </div>
+                <h3>Interested in Exchange? (Optional)</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="interestedBrand">Brand</label>
+                        <select id="interestedBrand">
+                            <option value="" disabled selected>Select Brand</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interestedModel">Model</label>
+                        <select id="interestedModel" disabled>
+                            <option value="" disabled selected>Select Model</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row-consent">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent" style="font-size: medium; font-weight: 100;">
+                        I hereby give my consent to NRPL Dealers for using my personal data for the purposes mentioned in the declaration of consent.
+                        I have read and understood the content of the declaration of consent.
+                    </label>
+                </div>
+
+                <center>
+                    <button type="submit" id="submit">Submit</button>
+                </center>
+            </form>
+        </main>
+        <footer class="footer">
+            <div class="footer1">
+                <div class="footer-container">
+                    <div class="footer-logo">
+                        <img src="/MEDIA/Screenshot 2025-08-11 123901.png" alt="NRPL Dealers Logo" />
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="homepage.html">Home</a></li>
+                                <li><a href="buy.html">Buy Cars</a></li>
+                                <li><a href="sell.html">Sell Cars</a></li>
+                                <li><a href="contactus.html">Contact Us</a></li>
+                                <li><a href="moreaboutus.html">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="carservice.html">Car Servicing</a></li>
+                                <li><a href="insurance.html">Car Insurance</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Connect With Us</h4>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="https://in.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer2">
+                <p>© 1999 NRPL Dealers. All Copyrights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="/JS/stickyheader.js"></script>
+    <script src="/JS/popuplogin.js"></script>
+    <script src="/JS/sell.js"></script>
+</body>
+</html>
